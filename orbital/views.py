@@ -3,7 +3,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html',{'name':'satelliti'})
+    return render(request, 'home.html')
 
 def add(request):
     val1=int(request.POST["num1"])
@@ -14,3 +14,6 @@ def add(request):
 
 def vr(request):
     return render(request, 'virtual.html')
+
+def Login(request):
+    return render(request, 'login.html')
