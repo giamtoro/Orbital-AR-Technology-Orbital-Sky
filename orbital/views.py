@@ -8,9 +8,3 @@ def home(request):
 def vr(request):
     return render(request, 'virtual.html')
 
-def Login(request):
-    return render(request, 'login.html')
-
-
-def signup(request):
-    return render(request, 'signup.html')
