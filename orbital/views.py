@@ -5,15 +5,12 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'home.html')
 
-def add(request):
-    val1=int(request.POST["num1"])
-    val2=int(request.POST["num2"])
-    res=val1+val2
-    return render(request, 'result.html',{'result':res})
-
-
 def vr(request):
     return render(request, 'virtual.html')
 
 def Login(request):
     return render(request, 'login.html')
+
+
+def signup(request):
+    return render(request, 'signup.html')

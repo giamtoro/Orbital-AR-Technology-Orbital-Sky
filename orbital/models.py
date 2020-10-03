@@ -4,11 +4,7 @@ from django.db import models
 class user(models.Model):
     Name= models.CharField(max_length=30)
     Password= models.CharField(max_length=30)
-    User_id= models.CharField(max_length=30)
-
-class devce(models.Model):
-    Id= models.CharField(max_length=30)
-    Devce_name= models.CharField(max_length=30)
+    Image=models.ImageField()#add imMAGE DEFAULT
 
 class satellite(models.Model):
     Latitude=models.FloatField()
