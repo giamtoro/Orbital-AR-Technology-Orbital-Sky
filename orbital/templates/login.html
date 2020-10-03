@@ -1,0 +1,7 @@
+{% exstends home.html %}
+<form action="add" method="POST">
+    {% csrf_token %}
+    <input type="text" name="num1"><br>
+    <input type="text" name="num2"><br>
+    <input type="submit" onclick = "sayHello()">
+</form>

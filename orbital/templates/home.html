@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html>
+ 
+   <head> 
+      <title>satelliti</title> 
+      
+      <style type = "text/css"> 
+         .red { 
+            color: red; 
+         } 
+         .thick{ 
+            font-size:20px; 
+         } 
+         .green { 
+            color:green; 
+         } 
+      </style>
+      <script type = "text/javascript">
+        function sayHello() {
+           document.write ("Hello there!");
+        }
+     </script>
+   </head>
+	
+   <body> 
+       <h1>Ciao {{name}}</h1>
+      
+  
+      <form action="vr" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="vr">
+       </form>
+   </body>
+	
+</html>
