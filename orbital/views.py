@@ -8,3 +8,8 @@ def home(request):
 def vr(request):
     return render(request, 'virtual.html')
 
+def satellite(request):
+    return render(request, 'satellite.html')
+
+def geo(request):
+    return render(request, 'geo.html')

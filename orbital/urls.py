@@ -5,4 +5,6 @@ from . import views
 urlpatterns=[
     path('',views.home, name='home'),
     path('vr',views.vr, name='vr'),
+    path('geo',views.geo, name='geo'),
+    path('satellite',views.satellite, name='satellite'),
 ]

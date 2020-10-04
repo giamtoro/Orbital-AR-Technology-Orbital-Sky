@@ -66,12 +66,22 @@ img {
 		
 		<ul class="nav navbar-nav navbar-right">
 		  <div class="btn-group">
-			 <li> <button >Satellite</button></li>
-		  </div>  
+        <form class="form-inline" action="vr">
+         <li> <button >virtual</button></li>
+        </form>
+      </div> 
+      <div class="btn-group">
+        <form class="form-inline" action="geo">
+          <li> <button >GPS</button></li>
+        </form>
+      </div> 
+      <div class="btn-group">
+        <form class="form-inline" >
+          <li> <button type="button" onclick="showPosition();">posizione</button></li>
+        </form>
+      </div> 
 		</ul>
-		
 	  </div>
-
 </div>
 
 <script>
@@ -87,6 +97,17 @@ function myFunction() {
     btn.innerHTML = "Play";
   }
 }
+function showPosition() {
+      if(navigator.geolocation ){
+          navigator.geolocation.getCurrentPosition(function(position) {
+              var positionInfo = "posizione (" + "Latitudine: " + position.coords.latitude + ", " + "Longitudine: " + position.coords.longitude + ")";
+              document.getElementById("result").innerHTML = positionInfo;
+          });
+      } else {
+          alert("niente geolocalizzazione");
+      }
+  }
+
 </script>
 
 </body>
