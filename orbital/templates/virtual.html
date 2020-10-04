@@ -1,7 +1,20 @@
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+
+  </head>
+  <body onload="showPosition()">
+    <a-scene>
+      <a-assets>
+        <img id="skytexture" src="http://www.eso.org/public/archives/images/screen/eso1501a.jpg">
+      </a-assets>
+      <a-camera position='{{x}} {{y}} {{z}}' user-height='0'></a-camera>
+        <a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="1" segments-height="53">
+           
+         </a-sphere>
+        <a-sky src="#skytexture" rotation="90 90 0"></a-sky>
+    </a-scene>
     <script>
       function showPosition() {
           if(navigator.geolocation) {
@@ -14,17 +27,6 @@
           }
       }
   </script>
-  </head>
-  <body>
-    <div id="result">
-        
-    </div>
-    <button type="button" onclick="showPosition();">posizione</button>
-    <a-scene physics>
-      <a-box position="-1 4 -3" rotation="0 45 0" color="#4CC3D9" dynamic-body></a-box>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" static-body></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
   </body>
 </html>
 

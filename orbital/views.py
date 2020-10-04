@@ -6,7 +6,15 @@ def home(request):
     return render(request, 'home.html')
 
 def vr(request):
-    return render(request, 'virtual.html')
+    x=12
+    y=-10
+    z=15
+    context= {
+        'x': x,
+        'y': y,
+        'z': z,
+        }
+    return render(request, 'virtual.html',context)
 
 def satellite(request):
     return render(request, 'satellite.html')
